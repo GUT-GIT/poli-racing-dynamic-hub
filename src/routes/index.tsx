@@ -30,7 +30,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Equipe Poli Racing de Fórmula SAE da Escola Politécnica da USP. Inovação, engenharia e alta performance no FP17.",
+          "Projeto de engenharia, automobilismo e alta performance da Poli-USP. Desenvolvemos o FP17 para a competição Fórmula SAE Brasil. Seja um parceiro!",
       },
       { property: "og:title", content: "Poli Racing — Fórmula SAE" },
       {

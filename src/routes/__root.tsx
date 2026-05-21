@@ -72,16 +72,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Poli Racing — Equipe Fórmula SAE USP" },
+      { name: "description", content: "Equipe Poli Racing de Fórmula SAE da Escola Politécnica da USP." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Poli Racing — Fórmula SAE USP" },
+      { property: "og:description", content: "Equipe Poli Racing de Fórmula SAE da Escola Politécnica da USP." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:site", content: "@EquipePoliRacing" },
+      { name: "twitter:title", content: "Poli Racing — Fórmula SAE USP" },
+      { name: "twitter:description", content: "Conheça o FP17 e nossa equipe de engenharia." },
+      { name: "twitter:image", content: "/foto-carro.jpeg" },
     ],
     links: [
+      {
+        rel: "icon",
+        type: "image/png",
+        href: "/logo.png", // <--- É AQUI QUE O ÍCONE DA ABA ENTRA!
+      },
       {
         rel: "stylesheet",
         href: appCss,
