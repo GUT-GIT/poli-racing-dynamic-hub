@@ -78,17 +78,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "Poli Racing — Fórmula SAE USP" },
       { property: "og:description", content: "Equipe Poli Racing de Fórmula SAE da Escola Politécnica da USP." },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://equipe-poli-racing.poliusp.workers.dev/foto-carro.jpeg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@EquipePoliRacing" },
       { name: "twitter:title", content: "Poli Racing — Fórmula SAE USP" },
       { name: "twitter:description", content: "Conheça o FP17 e nossa equipe de engenharia." },
-      { name: "twitter:image", content: "/foto-carro.jpeg" },
+      { name: "twitter:image", content: "https://equipe-poli-racing.poliusp.workers.dev/foto-carro.jpeg" },
     ],
     links: [
       {
         rel: "icon",
         type: "image/png",
-        href: "/logo.png", // <--- É AQUI QUE O ÍCONE DA ABA ENTRA!
+        href: "/logo.png",
       },
       {
         rel: "stylesheet",
