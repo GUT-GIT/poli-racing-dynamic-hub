@@ -123,7 +123,7 @@ const liderancas = [
   { area: "Powertrain — Transmissão", name: "Vinicius Pinheiro", foto: "/foto-vinicius.jpeg" },
   { area: "Frame e Body — Chassis", name: "Camila Rodrigues", foto: "/foto-camila.jpeg" },
   { area: "Frame e Body — Aerodinâmica", name: "Rodrigo Santiago", foto: "/foto-rodrigo.jpeg" },
-  { area: "Dinâmica Veicular", name: "Gustavo Hideki", foto: "/foto-gustavo.jpeg" },
+  { area: "Dinâmica Veicular", name: "Gustavo Hideki", foto: "/foto-hideki.jpeg" },
   { area: "Eletrônica", name: "Rafael Thomaz", foto: "/foto-rafael.jpeg" },
 ];
 
@@ -202,7 +202,7 @@ function Index() {
       >
         {/* Background placeholder */}
         <img 
-          src="foto-equipe3.jpg" 
+          src="/foto-equipe3.jpeg" 
           alt="Fundo Equipe Poli Racing" 
           className="absolute inset-0 w-full h-full object-cover" 
         />
@@ -273,7 +273,7 @@ function Index() {
           </div>
 
           <img
-            src="foto-equipe2.jpg"
+            src="/foto-equipe2.jpeg"
             alt="Foto oficial da equipe"
             className="aspect-square w-full rounded-3xl"
           />
