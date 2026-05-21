@@ -111,25 +111,25 @@ const subsistemas = [
 ];
 
 const gestaoGeral = [
-  { role: "Capitão", name: "Raphael Alcântara", foto: "public/foto-raphael.jpeg" },
-  { role: "Diretor de Projetos", name: "Marcos Miller", foto: "public/foto-marcos.jpeg" },
-  { role: "Diretor Técnico", name: "Antonio Lucas", foto: "public/foto-antonio.jpeg" },
-  { role: "Diretor de Manufatura", name: "Gabriel Bastos", foto: "public/foto-gabriel.jpeg" },
-  { role: "Diretora de COST e CAD", name: "Caterina Novaes", foto: "public/foto-caterina.jpeg" },
+  { role: "Capitão", name: "Raphael Alcântara", foto: "foto-raphael.jpeg" },
+  { role: "Diretor de Projetos", name: "Marcos Miller", foto: "foto-marcos.jpeg" },
+  { role: "Diretor Técnico", name: "Antonio Lucas", foto: "foto-antonio.jpeg" },
+  { role: "Diretor de Manufatura", name: "Gabriel Bastos", foto: "foto-gabriel.jpeg" },
+  { role: "Diretora de COST e CAD", name: "Caterina Novaes", foto: "foto-caterina.jpeg" },
 ];
 
 const liderancas = [
-  { area: "Powertrain — Motor", name: "Renan Fernandes", foto: "public/foto-renan.jpeg" },
-  { area: "Powertrain — Transmissão", name: "Vinicius Pinheiro", foto: "public/foto-vinicius.jpeg" },
-  { area: "Frame e Body — Chassis", name: "Camila Rodrigues", foto: "public/foto-camila.jpeg" },
-  { area: "Frame e Body — Aerodinâmica", name: "Rodrigo Santiago", foto: "public/foto-rodrigo.jpeg" },
-  { area: "Dinâmica Veicular", name: "Gustavo Hideki", foto: "public/foto-gustavo.jpeg" },
-  { area: "Eletrônica", name: "Rafael Thomaz", foto: "public/foto-rafael.jpeg" },
+  { area: "Powertrain — Motor", name: "Renan Fernandes", foto: "foto-renan.jpeg" },
+  { area: "Powertrain — Transmissão", name: "Vinicius Pinheiro", foto: "foto-vinicius.jpeg" },
+  { area: "Frame e Body — Chassis", name: "Camila Rodrigues", foto: "foto-camila.jpeg" },
+  { area: "Frame e Body — Aerodinâmica", name: "Rodrigo Santiago", foto: "foto-rodrigo.jpeg" },
+  { area: "Dinâmica Veicular", name: "Gustavo Hideki", foto: "foto-gustavo.jpeg" },
+  { area: "Eletrônica", name: "Rafael Thomaz", foto: "foto-rafael.jpeg" },
 ];
 
 const admin = [
-  { role: "Diretora de Marketing", name: "Camille Mayumi", foto: "public/foto-mayumi.jpeg" },
-  { role: "Diretora do Financeiro", name: "Tays Cardoso", foto: "public/foto-tays.jpeg" },
+  { role: "Diretora de Marketing", name: "Camille Mayumi", foto: "foto-mayumi.jpeg" },
+  { role: "Diretora do Financeiro", name: "Tays Cardoso", foto: "foto-tays.jpeg" },
 ];
 
 const socials = [
@@ -202,7 +202,7 @@ function Index() {
       >
         {/* Background placeholder */}
         <img 
-          src="public/foto-equipe3.jpg" 
+          src="foto-equipe3.jpg" 
           alt="Fundo Equipe Poli Racing" 
           className="absolute inset-0 w-full h-full object-cover" 
         />
@@ -214,7 +214,7 @@ function Index() {
         <div className="absolute inset-0 bg-grid pointer-events-none" aria-hidden />
         <div className="absolute inset-0 bg-black/55" aria-hidden />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-muted-foreground/30 text-xs uppercase tracking-[0.4em] pointer-events-none flex items-center gap-2">
-          <img src="public/foto-carro.jpeg" alt="Foto miniatura do carro" className="h-[14px] w-auto inline-block mr-1.5 rounded-sm" /> Foto do carro na pista
+          <img src="foto-carro.jpeg" alt="Foto miniatura do carro" className="h-[14px] w-auto inline-block mr-1.5 rounded-sm" /> Foto do carro na pista
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6 text-center w-full">
@@ -273,7 +273,7 @@ function Index() {
           </div>
 
           <img
-            src="public/foto-equipe2.jpg"
+            src="foto-equipe2.jpg"
             alt="Foto oficial da equipe"
             className="aspect-square w-full rounded-3xl"
           />
@@ -284,7 +284,7 @@ function Index() {
       <section id="carro" className="py-24 md:py-32 bg-surface/40 border-t border-border">
         <div className="max-w-7xl mx-auto px-6">
           <img
-            src="public/foto-carro4.jpeg"
+            src="foto-carro4.jpeg"
             alt="Render 3D do FP17"
             className="aspect-[21/9] w-full rounded-3xl mb-16"
           />
