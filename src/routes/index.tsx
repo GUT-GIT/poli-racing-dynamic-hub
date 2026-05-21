@@ -115,7 +115,7 @@ const gestaoGeral = [
   { role: "Diretor de Projetos", name: "Marcos Miller", foto: "/foto-marcos.jpeg" },
   { role: "Diretor Técnico", name: "Antonio Lucas", foto: "/foto-antonio.jpeg" },
   { role: "Diretor de Manufatura", name: "Gabriel Bastos", foto: "/foto-gabriel.jpeg" },
-  { role: "Diretora de COST e CAD", name: "Caterina Novaes", foto: "/foto-caterina.jpeg" },
+  //{ role: "Diretora de COST e CAD", name: "", foto: "" },
 ];
 
 const liderancas = [
