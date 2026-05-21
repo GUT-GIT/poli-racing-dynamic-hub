@@ -202,7 +202,7 @@ function Index() {
       >
         {/* Background */}
         <img
-          src="/foto-carro2.png"
+          src="/foto-carro.jpeg"
           alt="FP17 — Carro da Poli Racing"
           className="absolute inset-0 w-full h-full object-cover"
         />
