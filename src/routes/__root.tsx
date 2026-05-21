@@ -74,7 +74,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Poli Racing — Equipe Fórmula SAE USP" },
       { name: "description", content: "Equipe Poli Racing de Fórmula SAE da Escola Politécnica da USP." },
-      { name: "author", content: "Lovable" },
+      { name: "author", content: "Poli Racing"},
+
+      { name: "robots", content: "noindex, nofollow" },
+
       { property: "og:title", content: "Poli Racing — Fórmula SAE USP" },
       { property: "og:description", content: "Equipe Poli Racing de Fórmula SAE da Escola Politécnica da USP." },
       { property: "og:type", content: "website" },
