@@ -111,30 +111,30 @@ const subsistemas = [
 ];
 
 const gestaoGeral = [
-  { role: "Capitão", name: "Raphael Alcântara" },
-  { role: "Diretor de Projetos", name: "Marcos Miller" },
-  { role: "Diretor Técnico", name: "Antonio Lucas" },
-  { role: "Diretor de Manufatura", name: "Gabriel Bastos" },
-  { role: "Diretora de COST e CAD", name: "Caterina Novaes" },
+  { role: "Capitão", name: "Raphael Alcântara", foto: "public/foto-raphael.jpeg" },
+  { role: "Diretor de Projetos", name: "Marcos Miller", foto: "public/foto-marcos.jpeg" },
+  { role: "Diretor Técnico", name: "Antonio Lucas", foto: "public/foto-antonio.jpeg" },
+  { role: "Diretor de Manufatura", name: "Gabriel Bastos", foto: "public/foto-gabriel.jpeg" },
+  { role: "Diretora de COST e CAD", name: "Caterina Novaes", foto: "public/foto-caterina.jpeg" },
 ];
 
 const liderancas = [
-  { area: "Powertrain — Motor", name: "Renan Fernandes" },
-  { area: "Powertrain — Transmissão", name: "Vinicius Pinheiro" },
-  { area: "Frame e Body — Chassis", name: "Camila Rodrigues" },
-  { area: "Frame e Body — Aerodinâmica", name: "Rodrigo Santiago" },
-  { area: "Dinâmica Veicular", name: "Gustavo Hideki" },
-  { area: "Eletrônica", name: "Rafael Thomaz" },
+  { area: "Powertrain — Motor", name: "Renan Fernandes", foto: "public/foto-renan.jpeg" },
+  { area: "Powertrain — Transmissão", name: "Vinicius Pinheiro", foto: "public/foto-vinicius.jpeg" },
+  { area: "Frame e Body — Chassis", name: "Camila Rodrigues", foto: "public/foto-camila.jpeg" },
+  { area: "Frame e Body — Aerodinâmica", name: "Rodrigo Santiago", foto: "public/foto-rodrigo.jpeg" },
+  { area: "Dinâmica Veicular", name: "Gustavo Hideki", foto: "public/foto-gustavo.jpeg" },
+  { area: "Eletrônica", name: "Rafael Thomaz", foto: "public/foto-rafael.jpeg" },
 ];
 
 const admin = [
-  { role: "Diretora de Marketing", name: "Camille Mayumi" },
-  { role: "Diretora do Financeiro", name: "Tays Cardoso" },
+  { role: "Diretora de Marketing", name: "Camille Mayumi", foto: "public/foto-mayumi.jpeg" },
+  { role: "Diretora do Financeiro", name: "Tays Cardoso", foto: "public/foto-tays.jpeg" },
 ];
 
 const socials = [
-  { icon: Instagram, title: "Instagram", desc: "Atualizações do projeto em tempo real.", href: "#" },
-  { icon: Linkedin, title: "LinkedIn", desc: "Perfil profissional e parcerias.", href: "#" },
+  { icon: Instagram, title: "Instagram", desc: "Atualizações do projeto em tempo real.", href: "https://www.instagram.com/equipepoliracing/?hl=en" },
+  { icon: Linkedin, title: "LinkedIn", desc: "Perfil profissional e parcerias.", href: "https://www.linkedin.com/company/equipe-poli-racing-de-f%C3%B3rmula-sae" },
   { icon: Music2, title: "TikTok", desc: "Bastidores e o dia a dia da equipe.", href: "#" },
   { icon: Youtube, title: "YouTube", desc: "Vídeos técnicos e vlogs de competições.", href: "#" },
   { icon: Link2, title: "Linktree", desc: "Todas as nossas mídias em um só lugar.", href: "#" },
@@ -201,7 +201,11 @@ function Index() {
         className="relative min-h-[92vh] flex items-center pt-24 pb-16 overflow-hidden"
       >
         {/* Background placeholder */}
-        <div className="absolute inset-0 image-placeholder" aria-hidden />
+        <img 
+          src="public/foto-equipe3.jpg" 
+          alt="Fundo Equipe Poli Racing" 
+          className="absolute inset-0 w-full h-full object-cover" 
+        />
         <div
           className="absolute inset-0"
           style={{ background: "var(--gradient-hero)" }}
@@ -210,7 +214,7 @@ function Index() {
         <div className="absolute inset-0 bg-grid pointer-events-none" aria-hidden />
         <div className="absolute inset-0 bg-black/55" aria-hidden />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-muted-foreground/30 text-xs uppercase tracking-[0.4em] pointer-events-none flex items-center gap-2">
-          <img src="/foto-carro.jpeg" alt="Foto miniatura do carro" className="h-[14px] w-auto inline-block mr-1.5 rounded-sm" /> Foto do carro na pista
+          <img src="public/foto-carro.jpeg" alt="Foto miniatura do carro" className="h-[14px] w-auto inline-block mr-1.5 rounded-sm" /> Foto do carro na pista
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6 text-center w-full">
@@ -268,8 +272,9 @@ function Index() {
             </div>
           </div>
 
-          <ImagePlaceholder
-            label="Foto oficial da equipe"
+          <img
+            src="public/foto-equipe2.jpg"
+            alt="Foto oficial da equipe"
             className="aspect-square w-full rounded-3xl"
           />
         </div>
@@ -278,8 +283,9 @@ function Index() {
       {/* Carro */}
       <section id="carro" className="py-24 md:py-32 bg-surface/40 border-t border-border">
         <div className="max-w-7xl mx-auto px-6">
-          <ImagePlaceholder
-            label="Render 3D do FP17"
+          <img
+            src="public/foto-carro4.jpeg"
+            alt="Render 3D do FP17"
             className="aspect-[21/9] w-full rounded-3xl mb-16"
           />
 
@@ -523,7 +529,7 @@ function TeamGroup({
   accent,
 }: {
   title: string;
-  items: { a: string; b: string }[];
+  items: { a: string; b: string; c?: string }[]; // Adicionamos o "c" aqui
   accent?: boolean;
 }) {
   return (
@@ -541,9 +547,13 @@ function TeamGroup({
             key={i.a + i.b}
             className="flex items-center gap-4 p-4 rounded-xl bg-surface border border-border hover:border-primary/50 transition-colors"
           >
-            <div className="w-14 h-14 rounded-full image-placeholder border border-border flex items-center justify-center text-muted-foreground/50 shrink-0">
-              <ImageIcon size={16} />
-            </div>
+            {i.c ? (
+               <img src={i.c} alt={`Foto de ${i.b}`} className="w-14 h-14 rounded-full object-cover shrink-0" />
+            ) : (
+               <div className="w-14 h-14 rounded-full bg-surface-elevated border border-border flex items-center justify-center text-muted-foreground/50 shrink-0">
+                 <span className="font-bold">{i.b.charAt(0)}</span>
+               </div>
+            )}
             <div className="min-w-0">
               <p className="text-xs uppercase tracking-wider text-primary truncate">{i.a}</p>
               <p className="mt-0.5 font-display text-base font-semibold text-foreground truncate">
