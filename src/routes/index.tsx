@@ -120,31 +120,31 @@ const gestaoGeral = [
 
 const liderancas = [
   { area: "Powertrain — Motor", name: "Renan Fernandes", foto: "/foto-renan.jpeg" },
-  { area: "Powertrain — Transmissão", name: "Vinicius Pinheiro", foto: undefined },
-  { area: "Frame e Body — Chassis", name: "Camila Rodrigues", foto: undefined },
-  { area: "Frame e Body — Aerodinâmica", name: "Rodrigo Santiago", foto: undefined },
+  { area: "Powertrain — Transmissão", name: "Vinicius Pinheiro", foto: "/foto-vinicius.jpeg" },
+  { area: "Frame e Body — Chassis", name: "Camila Rodrigues", foto: "/foto-camila.jpeg" },
+  { area: "Frame e Body — Aerodinâmica", name: "Rodrigo Santiago", foto: "/foto-rodrigo.jpeg" },
   { area: "Dinâmica Veicular", name: "Gustavo Hideki", foto: "/foto-hideki.jpeg" },
   { area: "Eletrônica", name: "Rafael Thomaz", foto: "/foto-rafael.jpeg" },
 ];
 
 const admin = [
   { role: "Diretora de Marketing", name: "Camille Mayumi", foto: "/foto-mayumi.jpeg" },
-  { role: "Diretora do Financeiro", name: "Tays Cardoso", foto: undefined },
+  { role: "Diretora do Financeiro", name: "Thays Cardoso", foto: "/foto-thays.jpeg" },
 ];
 
 const socials = [
   { icon: Instagram, title: "Instagram", desc: "Atualizações do projeto em tempo real.", href: "https://www.instagram.com/equipepoliracing/?hl=en" },
   { icon: Linkedin, title: "LinkedIn", desc: "Perfil profissional e parcerias.", href: "https://www.linkedin.com/company/equipe-poli-racing-de-f%C3%B3rmula-sae" },
-  { icon: Music2, title: "TikTok", desc: "Bastidores e o dia a dia da equipe.", href: "#" },
-  { icon: Youtube, title: "YouTube", desc: "Vídeos técnicos e vlogs de competições.", href: "#" },
-  { icon: Link2, title: "Linktree", desc: "Todas as nossas mídias em um só lugar.", href: "#" },
+  //{ icon: Music2, title: "TikTok", desc: "Bastidores e o dia a dia da equipe.", href: "#" },
+  //{ icon: Youtube, title: "YouTube", desc: "Vídeos técnicos e vlogs de competições.", href: "#" },
+  //{ icon: Link2, title: "Linktree", desc: "Todas as nossas mídias em um só lugar.", href: "#" },
 ];
 
 const cotas = [
-  { tier: "Cota Ouro", count: 3 },
-  { tier: "Cota Prata", count: 4 },
-  { tier: "Cota Bronze", count: 5 },
-  { tier: "Apoios", count: 8 },
+  { tier: "Cota Ouro", logos: ["/ouro.png", "/ouro2.png", "/ouro3.png"], count: 3 },
+  { tier: "Cota Prata", logos: ["/prata.png", "/prata2.png", "/prata3.png"], count: 4 },
+  { tier: "Cota Bronze", logos: ["/bronze.png", "/bronze2.png", "/bronze3.png"], count: 5 },
+  { tier: "Apoios", logos: ["/apoio.png", "/apoio2.png", "/apoio3.png", "/apoio4.png", "/apoio5.png", "/apoio6.png", "/apoio7.png", "/apoio8.png"], count: 8 },
 ];
 
 function Index() {
@@ -272,7 +272,7 @@ function Index() {
           <img
             src="/foto-equipe3.jpeg"
             alt="Foto oficial da equipe Poli Racing"
-            className="aspect-square w-full rounded-3xl object-cover"
+            className="w-full h-auto rounded-3xl object-contain"
           />
         </div>
       </section>
@@ -369,12 +369,16 @@ function Index() {
           <div className="flex gap-6 animate-marquee w-max">
             {[...Array(2)].map((_, dup) => (
               <div key={dup} className="flex gap-6">
-                {Array.from({ length: 10 }).map((_, i) => (
+                {cotas.flatMap((c: any) => c.logos || []).map((logo: string, i: number) => (
                   <div
                     key={i}
-                    className="w-44 h-24 rounded-xl border border-border bg-surface flex items-center justify-center text-muted-foreground/50 text-xs uppercase tracking-widest"
+                    className="w-44 h-24 rounded-xl border border-border bg-surface flex items-center justify-center p-4"
                   >
-                    Logo {i + 1}
+                    <img 
+                      src={logo} 
+                      alt="Logo Patrocinador" 
+                      className="max-w-full max-h-full object-contain" 
+                    />
                   </div>
                 ))}
               </div>
@@ -384,16 +388,20 @@ function Index() {
 
         {/* Cotas */}
         <div className="max-w-7xl mx-auto px-6 mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4">
-          {cotas.map((c) => (
+          {cotas.map((c: any) => (
             <div key={c.tier} className="p-6 rounded-2xl bg-surface border border-border">
               <p className="text-xs uppercase tracking-[0.2em] text-primary">{c.tier}</p>
               <div className="mt-4 grid grid-cols-2 gap-2">
-                {Array.from({ length: c.count }).map((_, i) => (
+                {c.logos && c.logos.map((logo: string, i: number) => (
                   <div
                     key={i}
-                    className="aspect-[3/2] rounded-md border border-border bg-background/60 flex items-center justify-center text-muted-foreground/40 text-[10px]"
+                    className="aspect-[3/2] rounded-md border border-border bg-background/60 flex items-center justify-center p-2"
                   >
-                    Logo
+                    <img 
+                      src={logo} 
+                      alt={`Logo ${c.tier}`} 
+                      className="max-w-full max-h-full object-contain" 
+                    />
                   </div>
                 ))}
               </div>

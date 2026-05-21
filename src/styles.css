@@ -33,7 +33,9 @@
   --font-display: "Space Grotesk", system-ui, sans-serif;
   --font-sans: "Inter", system-ui, sans-serif;
   --shadow-glow: 0 0 50px -10px var(--primary);
-  --gradient-hero: radial-gradient(ellipse at top, oklch(0.30 0.18 50 / 0.25), transparent 60%), linear-gradient(180deg, oklch(0.10 0.005 60), oklch(0.06 0.003 60));
+  --gradient-hero:
+   radial-gradient(ellipse at top, oklch(0.30 0.18 50 / 0.25), transparent 60%),
+    linear-gradient(180deg, oklch(0.08 0.004 60 / 0.4) 0%, transparent 40%, oklch(0.06 0.003 60 / 0.7) 100%);
   --gradient-accent: linear-gradient(135deg, oklch(0.72 0.20 50), oklch(0.62 0.22 40));
 }
 
