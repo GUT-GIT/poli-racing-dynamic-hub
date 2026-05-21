@@ -111,25 +111,25 @@ const subsistemas = [
 ];
 
 const gestaoGeral = [
-  { role: "Capitão", name: "Raphael Alcântara", foto: "/fotos/raphael.jpg" },
-  { role: "Diretor de Projetos", name: "Marcos Miller", foto: "/fotos/marcos.jpg" },
-  { role: "Diretor Técnico", name: "Antonio Lucas", foto: "/fotos/antonio.jpg" },
-  { role: "Diretor de Manufatura", name: "Gabriel Bastos", foto: "/fotos/gabriel.jpg" },
-  { role: "Diretora de COST e CAD", name: "Caterina Novaes", foto: "/fotos/caterina.jpg" },
+  { role: "Capitão", name: "Raphael Alcântara", foto: "/foto-raphael.jpeg" },
+  { role: "Diretor de Projetos", name: "Marcos Miller", foto: "/foto-marcos.jpeg" },
+  { role: "Diretor Técnico", name: "Antonio Lucas", foto: "/foto-antonio.jpeg" },
+  { role: "Diretor de Manufatura", name: "Gabriel Bastos", foto: "/foto-gabriel.jpeg" },
+  { role: "Diretora de COST e CAD", name: "Caterina Novaes", foto: "/foto-caterina.jpeg" },
 ];
 
 const liderancas = [
-  { area: "Powertrain — Motor", name: "Renan Fernandes", foto: "/fotos/renan.jpg" },
-  { area: "Powertrain — Transmissão", name: "Vinicius Pinheiro", foto: "/fotos/vinicius.jpg" },
-  { area: "Frame e Body — Chassis", name: "Camila Rodrigues", foto: "/fotos/camila.jpg" },
-  { area: "Frame e Body — Aerodinâmica", name: "Rodrigo Santiago", foto: "/fotos/rodrigo.jpg" },
-  { area: "Dinâmica Veicular", name: "Gustavo Hideki", foto: "/fotos/gustavo.jpg" },
-  { area: "Eletrônica", name: "Rafael Thomaz", foto: "/fotos/rafael.jpg" },
+  { area: "Powertrain — Motor", name: "Renan Fernandes", foto: "/foto-renan.jpeg" },
+  { area: "Powertrain — Transmissão", name: "Vinicius Pinheiro", foto: undefined },
+  { area: "Frame e Body — Chassis", name: "Camila Rodrigues", foto: undefined },
+  { area: "Frame e Body — Aerodinâmica", name: "Rodrigo Santiago", foto: undefined },
+  { area: "Dinâmica Veicular", name: "Gustavo Hideki", foto: "/foto-hideki.jpeg" },
+  { area: "Eletrônica", name: "Rafael Thomaz", foto: "/foto-rafael.jpeg" },
 ];
 
 const admin = [
-  { role: "Diretora de Marketing", name: "Camille Mayumi", foto: "/fotos/camille.jpg" },
-  { role: "Diretora do Financeiro", name: "Tays Cardoso", foto: "/fotos/tays.jpg" },
+  { role: "Diretora de Marketing", name: "Camille Mayumi", foto: "/foto-mayumi.jpeg" },
+  { role: "Diretora do Financeiro", name: "Tays Cardoso", foto: undefined },
 ];
 
 const socials = [
@@ -158,7 +158,7 @@ function Index() {
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-background/75 border-b border-border">
         <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <a href="#hero" className="flex items-center gap-2 font-display font-bold tracking-tight">
-            <span className="w-8 h-8 rounded-md bg-gradient-to-br from-primary to-primary/40 glow flex items-center justify-center text-primary-foreground text-xs font-black">PR</span>
+            <img src="/logo.png" alt="Poli Racing" className="w-8 h-8 object-contain" />
             <span className="text-foreground">Poli Racing</span>
           </a>
           <ul className="hidden lg:flex items-center gap-7 text-sm">
@@ -200,11 +200,11 @@ function Index() {
         id="hero"
         className="relative min-h-[92vh] flex items-center pt-24 pb-16 overflow-hidden"
       >
-        {/* Background placeholder */}
-        <img 
-          src="/foto-carro.jpg"
-          alt="Fundo Equipe Poli Racing" 
-          className="absolute inset-0 w-full h-full object-cover" 
+        {/* Background */}
+        <img
+          src="/foto-carro.jpeg"
+          alt="FP17 — Carro da Poli Racing"
+          className="absolute inset-0 w-full h-full object-cover"
         />
         <div
           className="absolute inset-0"
@@ -213,9 +213,6 @@ function Index() {
         />
         <div className="absolute inset-0 bg-grid pointer-events-none" aria-hidden />
         <div className="absolute inset-0 bg-black/55" aria-hidden />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-muted-foreground/30 text-xs uppercase tracking-[0.4em] pointer-events-none flex items-center gap-2">
-          <img src="/foto-carro.jpg" alt="Foto miniatura do carro" className="h-[14px] w-auto inline-block mr-1.5 rounded-sm" /> Foto do carro na pista
-        </div>
 
         <div className="relative max-w-7xl mx-auto px-6 text-center w-full">
           <span className="inline-block text-xs uppercase tracking-[0.3em] text-primary mb-6">
@@ -273,9 +270,9 @@ function Index() {
           </div>
 
           <img
-            src="/foto-carro.jpg"
-            alt="Foto oficial da equipe"
-            className="aspect-square w-full rounded-3xl"
+            src="/foto-equipe3.jpeg"
+            alt="Foto oficial da equipe Poli Racing"
+            className="aspect-square w-full rounded-3xl object-cover"
           />
         </div>
       </section>
@@ -284,9 +281,9 @@ function Index() {
       <section id="carro" className="py-24 md:py-32 bg-surface/40 border-t border-border">
         <div className="max-w-7xl mx-auto px-6">
           <img
-            src="/foto-carro.jpg"
-            alt="Render 3D do FP17"
-            className="aspect-[21/9] w-full rounded-3xl mb-16"
+            src="/foto-carro.jpeg"
+            alt="FP17 em ação"
+            className="aspect-[21/9] w-full rounded-3xl object-cover mb-16"
           />
 
           <div className="max-w-3xl">
@@ -358,6 +355,11 @@ function Index() {
           <p className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto">
             Agradecemos aos parceiros que tornam a inovação possível.
           </p>
+          <img
+            src="/foto-patrocinadores.jpeg"
+            alt="Patrocinadores Poli Racing"
+            className="mt-10 w-full rounded-3xl object-cover max-h-[420px]"
+          />
         </div>
 
         {/* Marquee */}
