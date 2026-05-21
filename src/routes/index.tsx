@@ -210,7 +210,7 @@ function Index() {
         <div className="absolute inset-0 bg-grid pointer-events-none" aria-hidden />
         <div className="absolute inset-0 bg-black/55" aria-hidden />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-muted-foreground/30 text-xs uppercase tracking-[0.4em] pointer-events-none flex items-center gap-2">
-          <img src="/carro-pista-mini.jpg" alt="Foto miniatura do carro" className="h-[14px] w-auto inline-block mr-1.5 rounded-sm" /> Foto do carro na pista
+          <img src="/foto-carro.jpeg" alt="Foto miniatura do carro" className="h-[14px] w-auto inline-block mr-1.5 rounded-sm" /> Foto do carro na pista
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6 text-center w-full">
