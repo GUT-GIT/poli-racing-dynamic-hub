@@ -281,9 +281,9 @@ function Index() {
       <section id="carro" className="py-24 md:py-32 bg-surface/40 border-t border-border">
         <div className="max-w-7xl mx-auto px-6">
           <img
-            src="/foto-carro.jpg"
-            alt="Render 3D do FP17"
-            className="aspect-[21/9] w-full rounded-3xl mb-16"
+            src="/foto-carro3.jpg"
+            alt="FP17 em ação"
+            className="aspect-[21/9] w-full rounded-3xl object-cover mb-16"
           />
 
           <div className="max-w-3xl">
