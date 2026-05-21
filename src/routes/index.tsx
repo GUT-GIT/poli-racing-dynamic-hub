@@ -111,25 +111,25 @@ const subsistemas = [
 ];
 
 const gestaoGeral = [
-  { role: "Capitão", name: "Raphael Alcântara", foto: "/fotos/raphael.jpg" },
-  { role: "Diretor de Projetos", name: "Marcos Miller", foto: "/fotos/marcos.jpg" },
-  { role: "Diretor Técnico", name: "Antonio Lucas", foto: "/fotos/antonio.jpg" },
-  { role: "Diretor de Manufatura", name: "Gabriel Bastos", foto: "/fotos/gabriel.jpg" },
-  { role: "Diretora de COST e CAD", name: "Caterina Novaes", foto: "/fotos/caterina.jpg" },
+  { role: "Capitão", name: "Raphael Alcântara", foto: "/foto-raphael.jpeg" },
+  { role: "Diretor de Projetos", name: "Marcos Miller", foto: "/foto-marcos.jpeg" },
+  { role: "Diretor Técnico", name: "Antonio Lucas", foto: "/foto-antonio.jpeg" },
+  { role: "Diretor de Manufatura", name: "Gabriel Bastos", foto: "/foto-gabriel.jpeg" },
+  { role: "Diretora de COST e CAD", name: "Caterina Novaes", foto: "/foto-caterina.jpeg" },
 ];
 
 const liderancas = [
-  { area: "Powertrain — Motor", name: "Renan Fernandes", foto: "/fotos/renan.jpg" },
-  { area: "Powertrain — Transmissão", name: "Vinicius Pinheiro", foto: "/fotos/vinicius.jpg" },
-  { area: "Frame e Body — Chassis", name: "Camila Rodrigues", foto: "/fotos/camila.jpg" },
-  { area: "Frame e Body — Aerodinâmica", name: "Rodrigo Santiago", foto: "/fotos/rodrigo.jpg" },
-  { area: "Dinâmica Veicular", name: "Gustavo Hideki", foto: "/fotos/gustavo.jpg" },
-  { area: "Eletrônica", name: "Rafael Thomaz", foto: "/fotos/rafael.jpg" },
+  { area: "Powertrain — Motor", name: "Renan Fernandes", foto: "/foto-renan.jpeg" },
+  { area: "Powertrain — Transmissão", name: "Vinicius Pinheiro", foto: undefined },
+  { area: "Frame e Body — Chassis", name: "Camila Rodrigues", foto: undefined },
+  { area: "Frame e Body — Aerodinâmica", name: "Rodrigo Santiago", foto: undefined },
+  { area: "Dinâmica Veicular", name: "Gustavo Hideki", foto: "/foto-hideki.jpeg" },
+  { area: "Eletrônica", name: "Rafael Thomaz", foto: "/foto-rafael.jpeg" },
 ];
 
 const admin = [
-  { role: "Diretora de Marketing", name: "Camille Mayumi", foto: "/fotos/camille.jpg" },
-  { role: "Diretora do Financeiro", name: "Tays Cardoso", foto: "/fotos/tays.jpg" },
+  { role: "Diretora de Marketing", name: "Camille Mayumi", foto: "/foto-mayumi.jpeg" },
+  { role: "Diretora do Financeiro", name: "Tays Cardoso", foto: undefined },
 ];
 
 const socials = [
