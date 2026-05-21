@@ -460,9 +460,9 @@ function Index() {
           </p>
 
           <div className="mt-14 space-y-12">
-            <TeamGroup title="Gestão Geral" items={gestaoGeral.map((g) => ({ a: g.role, b: g.name }))} accent />
-            <TeamGroup title="Lideranças de Subsistemas" items={liderancas.map((l) => ({ a: l.area, b: l.name }))} />
-            <TeamGroup title="Departamentos Administrativos" items={admin.map((g) => ({ a: g.role, b: g.name }))} />
+            <TeamGroup title="Gestão Geral" items={gestaoGeral.map((g) => ({ a: g.role, b: g.name, c: g.foto }))} accent />
+            <TeamGroup title="Lideranças de Subsistemas" items={liderancas.map((l) => ({ a: l.area, b: l.name, c: l.foto }))} />
+            <TeamGroup title="Departamentos Administrativos" items={admin.map((g) => ({ a: g.role, b: g.name, c: g.foto }))} />
           </div>
         </div>
       </section>
