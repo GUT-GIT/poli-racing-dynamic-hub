@@ -270,9 +270,9 @@ function Index() {
           </div>
 
           <img
-            src="/foto-carro.jpg"
-            alt="Foto oficial da equipe"
-            className="aspect-square w-full rounded-3xl"
+            src="/foto-equipe.jpeg"
+            alt="Foto oficial da equipe Poli Racing"
+            className="aspect-square w-full rounded-3xl object-cover"
           />
         </div>
       </section>
