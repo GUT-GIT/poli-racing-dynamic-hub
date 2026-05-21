@@ -158,7 +158,7 @@ function Index() {
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-background/75 border-b border-border">
         <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <a href="#hero" className="flex items-center gap-2 font-display font-bold tracking-tight">
-            <span className="w-8 h-8 rounded-md bg-gradient-to-br from-primary to-primary/40 glow flex items-center justify-center text-primary-foreground text-xs font-black">PR</span>
+            <img src="/logo.png" alt="Poli Racing" className="w-8 h-8 object-contain" />
             <span className="text-foreground">Poli Racing</span>
           </a>
           <ul className="hidden lg:flex items-center gap-7 text-sm">
