@@ -200,11 +200,11 @@ function Index() {
         id="hero"
         className="relative min-h-[92vh] flex items-center pt-24 pb-16 overflow-hidden"
       >
-        {/* Background placeholder */}
-        <img 
-          src="/foto-carro.jpg"
-          alt="Fundo Equipe Poli Racing" 
-          className="absolute inset-0 w-full h-full object-cover" 
+        {/* Background */}
+        <img
+          src="/foto-carro2.png"
+          alt="FP17 — Carro da Poli Racing"
+          className="absolute inset-0 w-full h-full object-cover"
         />
         <div
           className="absolute inset-0"
@@ -213,9 +213,6 @@ function Index() {
         />
         <div className="absolute inset-0 bg-grid pointer-events-none" aria-hidden />
         <div className="absolute inset-0 bg-black/55" aria-hidden />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-muted-foreground/30 text-xs uppercase tracking-[0.4em] pointer-events-none flex items-center gap-2">
-          <img src="/foto-carro.jpg" alt="Foto miniatura do carro" className="h-[14px] w-auto inline-block mr-1.5 rounded-sm" /> Foto do carro na pista
-        </div>
 
         <div className="relative max-w-7xl mx-auto px-6 text-center w-full">
           <span className="inline-block text-xs uppercase tracking-[0.3em] text-primary mb-6">
