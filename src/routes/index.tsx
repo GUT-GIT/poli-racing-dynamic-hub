@@ -355,6 +355,11 @@ function Index() {
           <p className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto">
             Agradecemos aos parceiros que tornam a inovação possível.
           </p>
+          <img
+            src="/foto-patrocinadores.jpeg"
+            alt="Patrocinadores Poli Racing"
+            className="mt-10 w-full rounded-3xl object-cover max-h-[420px]"
+          />
         </div>
 
         {/* Marquee */}
