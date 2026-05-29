@@ -191,14 +191,24 @@ function Index() {
         {mobileOpen && (
           <ul className="lg:hidden border-t border-border bg-background px-6 py-4 space-y-3 text-sm">
             {navLinks.map((l) => (
-              <li key={l.href}>
-                <a
-                  href={l.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="block text-muted-foreground hover:text-primary"
-                >
-                  {l.label}
-                </a>
+              <li key={l.href || l.to}>
+                {l.isRoute ? (
+                  <Link
+                    to={l.to!}
+                    onClick={() => setMobileOpen(false)}
+                    className="block text-muted-foreground hover:text-primary"
+                  >
+                    {l.label}
+                  </Link>
+                ) : (
+                  <a
+                    href={l.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="block text-muted-foreground hover:text-primary"
+                  >
+                    {l.label}
+                  </a>
+                )}
               </li>
             ))}
           </ul>
