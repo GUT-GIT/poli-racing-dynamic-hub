@@ -49,6 +49,7 @@ const navLinks = [
   { href: "#patrocinadores", label: "Patrocinadores" },
   { href: "#faca-parte", label: "Faça Parte" },
   { href: "#contato", label: "Contato" },
+  { to: "/loja", label: "Loja", isRoute: true },
 ];
 
 const subsistemas = [
