@@ -164,10 +164,19 @@ function Index() {
           </a>
           <ul className="hidden lg:flex items-center gap-7 text-sm">
             {navLinks.map((l) => (
-              <li key={l.href}>
-                <a href={l.href} className="text-muted-foreground hover:text-primary transition-colors">
-                  {l.label}
-                </a>
+              <li key={l.href || l.to}>
+                {l.isRoute ? (
+                  <Link
+                    to={l.to!}
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {l.label}
+                  </Link>
+                ) : (
+                  <a href={l.href} className="text-muted-foreground hover:text-primary transition-colors">
+                    {l.label}
+                  </a>
+                )}
               </li>
             ))}
           </ul>
