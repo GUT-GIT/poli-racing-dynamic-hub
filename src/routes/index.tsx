@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   Instagram,
@@ -49,6 +49,7 @@ const navLinks = [
   { href: "#patrocinadores", label: "Patrocinadores" },
   { href: "#faca-parte", label: "Faça Parte" },
   { href: "#contato", label: "Contato" },
+  { to: "/loja", label: "Loja", isRoute: true },
 ];
 
 const subsistemas = [
@@ -163,10 +164,19 @@ function Index() {
           </a>
           <ul className="hidden lg:flex items-center gap-7 text-sm">
             {navLinks.map((l) => (
-              <li key={l.href}>
-                <a href={l.href} className="text-muted-foreground hover:text-primary transition-colors">
-                  {l.label}
-                </a>
+              <li key={l.href || l.to}>
+                {l.isRoute ? (
+                  <Link
+                    to={l.to!}
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {l.label}
+                  </Link>
+                ) : (
+                  <a href={l.href} className="text-muted-foreground hover:text-primary transition-colors">
+                    {l.label}
+                  </a>
+                )}
               </li>
             ))}
           </ul>
@@ -181,14 +191,24 @@ function Index() {
         {mobileOpen && (
           <ul className="lg:hidden border-t border-border bg-background px-6 py-4 space-y-3 text-sm">
             {navLinks.map((l) => (
-              <li key={l.href}>
-                <a
-                  href={l.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="block text-muted-foreground hover:text-primary"
-                >
-                  {l.label}
-                </a>
+              <li key={l.href || l.to}>
+                {l.isRoute ? (
+                  <Link
+                    to={l.to!}
+                    onClick={() => setMobileOpen(false)}
+                    className="block text-muted-foreground hover:text-primary"
+                  >
+                    {l.label}
+                  </Link>
+                ) : (
+                  <a
+                    href={l.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="block text-muted-foreground hover:text-primary"
+                  >
+                    {l.label}
+                  </a>
+                )}
               </li>
             ))}
           </ul>
