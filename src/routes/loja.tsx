@@ -91,7 +91,7 @@ const produtos: Produto[] = [
   },
 ];
 
-const WHATSAPP_NUMBER = "5511999999999";
+const WHATSAPP_NUMBER = "5511958169832";
 
 function formatarPreco(valor: number): string {
   return `R$ ${valor.toFixed(2).replace(".", ",")}`;
