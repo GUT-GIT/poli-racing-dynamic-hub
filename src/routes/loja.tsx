@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { ShoppingCart, ArrowLeft, Menu, X } from "lucide-react";
+import { ShoppingCart, ArrowLeft, Menu, X, ChevronLeft, ChevronRight } from "lucide-react";
 
 export const Route = createFileRoute("/loja")({
   head: () => ({
@@ -29,7 +30,7 @@ interface Produto {
   nome: string;
   preco: number;
   categoria: Categoria;
-  imagem: string;
+  imagem: string[];
 }
 
 const produtos: Produto[] = [
@@ -38,35 +39,35 @@ const produtos: Produto[] = [
     nome: "Camiseta Oficial 25/26",
     preco: 75,
     categoria: "Vestuário",
-    imagem: "/placeholder.svg",
+    imagem: ["/broche1.png", "/broche2.png", "/broche3.png" ],
   },
   {
     id: "bone",
     nome: "Boné Poli Racing",
     preco: 59.99,
     categoria: "Vestuário",
-    imagem: "/placeholder.svg",
+    imagem: ["/placeholder.svg"],
   },
   {
     id: "kit-adesivos",
     nome: "Kit Adesivos",
     preco: 10,
     categoria: "Kits",
-    imagem: "/placeholder.svg",
+    imagem: ["/placeholder.svg"],
   },
   {
     id: "kit-presente",
     nome: "Kit Presente",
     preco: 10,
     categoria: "Kits",
-    imagem: "/placeholder.svg",
+    imagem: ["/placeholder.svg"],
   },
   {
     id: "camiseta-lançamento FP17",
     nome: "Camiseta Lançamento FP17",
     preco: 69.9,
     categoria: "Vestuário",
-    imagem: "/placeholder.svg",
+    imagem: ["/placeholder.svg"],
   },
 ];
 
